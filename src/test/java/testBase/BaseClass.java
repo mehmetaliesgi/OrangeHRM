@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -25,11 +26,14 @@ public class BaseClass {
     public static WebDriver driver;
     public Logger logger;
     public Properties properties;
+    public WebDriverWait wait;
 
     @BeforeClass
     @Parameters({"os", "browser"})
     public void setup(String os, String browser) throws IOException {
         logger = LogManager.getLogger(this.getClass());
+
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         FileReader file =new FileReader("C:\\Users\\mehme\\Desktop\\Selenium_Projects\\OrangeHRM\\src\\test\\resources\\config.properties");
         properties = new Properties();
