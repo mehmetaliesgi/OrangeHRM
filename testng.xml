@@ -11,6 +11,7 @@
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="testCases.LoginTest"/>
+            <class name="testCases.PIMPageTest"></class>
         </classes>
     </test>
 </suite>

@@ -1,5 +1,6 @@
 package testBase;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -72,5 +73,9 @@ public class BaseClass {
         sourceFile.renameTo(targetFile);
 
         return "\\screenshots\\" + testName + "_" + timeStamp + ".png";
+    }
+
+    public String randomNumber() {
+        return (RandomStringUtils.randomNumeric(5));
     }
 }

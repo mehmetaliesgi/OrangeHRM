@@ -3,7 +3,6 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,6 +14,9 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//h6[normalize-space()='Dashboard']")
     private WebElement txtDashboardHeader;
 
+    @FindBy(xpath = "//span[normalize-space()='PIM']")
+    private WebElement btnPIM;
+
     public boolean isDashboardPageExist() {
         wait.until(ExpectedConditions.visibilityOf(txtDashboardHeader));
         try {
@@ -22,5 +24,10 @@ public class DashboardPage extends BasePage {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public void clickPIM() {
+        wait.until(ExpectedConditions.visibilityOf(btnPIM));
+        btnPIM.click();
     }
 }

@@ -6,3 +6,5 @@ target/
 ### IntelliJ IDEA ###
 .idea
 test-output
+reports
+logs

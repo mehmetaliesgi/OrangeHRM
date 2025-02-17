@@ -2,3 +2,11 @@
 15:43:40 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
 15:46:54 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
 15:46:56 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+18:21:04 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+18:21:05 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+18:21:09 [main] INFO  testCases.PIMPageTest - ******* Starting Add New Employee *******
+18:21:18 [main] INFO  testCases.PIMPageTest - ***** Finished Add New Employee *****
+20:00:26 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+20:00:28 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+20:00:32 [main] INFO  testCases.PIMPageTest - ******* Starting Add New Employee *******
+20:00:41 [main] INFO  testCases.PIMPageTest - ***** Finished Add New Employee *****
