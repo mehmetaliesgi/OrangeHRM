@@ -3,9 +3,7 @@ package testBase;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -66,9 +64,7 @@ public class BaseClass {
 
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        System.out.println(sourceFile);
         String targetFilepath = System.getProperty("user.dir") + "\\screenshots\\" + testName + "_" + timeStamp + ".png";
-        System.out.println(targetFilepath);
         File targetFile = new File(targetFilepath);
 
         sourceFile.renameTo(targetFile);
@@ -79,4 +75,9 @@ public class BaseClass {
     public String randomNumber() {
         return (RandomStringUtils.randomNumeric(5));
     }
+
+    public String randomString(int letterCount) {
+        return (RandomStringUtils.randomAlphabetic(letterCount));
+    }
+
 }

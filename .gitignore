@@ -8,3 +8,5 @@ target/
 test-output
 reports
 logs
+src/test/resources/resumeMehmetAliEsgi.pdf
+screenshots

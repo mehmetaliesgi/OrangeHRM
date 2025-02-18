@@ -1,60 +1,55 @@
-00:58:53 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-00:58:58 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:01:01 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:01:03 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:01:07 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:02:52 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:02:55 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:02:59 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:04:27 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:04:30 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:04:33 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:06:06 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:06:08 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:06:13 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:09:13 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:09:16 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:09:21 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:11:08 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:11:10 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:11:13 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:12:47 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:12:49 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:12:54 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:18:24 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:18:26 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:18:30 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-01:21:43 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-01:21:45 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-01:21:48 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:27:50 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:27:53 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:27:56 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:30:35 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:30:37 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:30:40 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:32:16 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:32:18 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:32:21 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:34:35 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:34:37 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:34:40 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:37:03 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:37:12 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:37:17 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:38:51 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:39:06 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:39:12 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:42:09 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:42:11 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:42:14 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:47:21 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:47:23 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:47:26 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:48:16 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:48:18 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:48:21 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:57:33 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
-14:57:35 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
-14:57:38 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Employee *******
-14:58:15 [main] INFO  testCases.PIMPageTest - ***** Finished Edit Employee *****
+01:16:35 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+01:16:38 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+01:16:41 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+01:32:18 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+01:32:20 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+01:32:23 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+01:35:15 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+01:35:16 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+01:35:20 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+01:42:37 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+01:42:40 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+01:42:44 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+01:45:07 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+01:45:10 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+01:45:13 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+01:47:54 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+01:47:56 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+01:48:00 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+01:49:57 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+01:49:59 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+01:50:02 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+01:52:12 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+01:52:14 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+01:52:17 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:13:53 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+02:13:55 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+02:13:59 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:14:42 [main] INFO  testCases.PIMPageTest - ***** Finished Edit Contact Details for Employee *****
+02:16:53 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+02:16:55 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+02:16:58 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:17:56 [main] INFO  testCases.PIMPageTest - ***** Finished Edit Contact Details for Employee *****
+02:20:09 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+02:20:11 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+02:20:14 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:21:22 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+02:21:24 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+02:21:27 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:22:26 [main] INFO  testCases.PIMPageTest - ***** Finished Edit Contact Details for Employee *****
+02:25:49 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+02:25:51 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+02:25:54 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:26:53 [main] INFO  testCases.PIMPageTest - ***** Finished Edit Contact Details for Employee *****
+02:29:47 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+02:29:49 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+02:29:52 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:30:51 [main] INFO  testCases.PIMPageTest - ***** Finished Edit Contact Details for Employee *****
+02:33:21 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+02:33:23 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+02:33:26 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:34:21 [main] INFO  testCases.PIMPageTest - ***** Finished Edit Contact Details for Employee *****
+02:40:54 [main] INFO  testCases.LoginTest - ******* Starting LoginTest *******
+02:40:56 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
+02:40:59 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Contact Details for Employee *******
+02:41:17 [main] INFO  testCases.PIMPageTest - ***** Finished Edit Contact Details for Employee *****

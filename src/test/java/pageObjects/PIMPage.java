@@ -48,7 +48,10 @@ public class PIMPage extends BasePage{
     private WebElement txtRecordFound;
 
     @FindBy(xpath = "//i[@class='oxd-icon bi-pencil-fill']")
-    private WebElement btnPersonalDetails;
+    private WebElement btnEmployeeDetails;
+
+    @FindBy(xpath = "//a[normalize-space()='Contact Details']")
+    private WebElement btnContactDetails;
 
     public boolean isPIMHeaderDisplayed() {
         wait.until(ExpectedConditions.visibilityOf(txtPIMHeader));
@@ -132,8 +135,12 @@ public class PIMPage extends BasePage{
         }
     }
 
-    public void clickPersonalDetails() {
-        wait.until(ExpectedConditions.visibilityOf(btnPersonalDetails));
-        btnPersonalDetails.click();
+    public void clickEmployeeDetails() {
+        wait.until(ExpectedConditions.visibilityOf(btnEmployeeDetails));
+        btnEmployeeDetails.click();
+    }
+
+    public void clickContactDetails() {
+        btnContactDetails.click();
     }
 }

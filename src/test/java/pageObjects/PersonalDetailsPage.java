@@ -35,52 +35,42 @@ public class PersonalDetailsPage extends BasePage{
         super(driver, wait);
     }
 
-    public void setOtherID(String otherId) throws InterruptedException {
+    public void setOtherID(String otherId){
         wait.until(ExpectedConditions.visibilityOf(txtOtherID));
         txtOtherID.click();
         txtOtherID.sendKeys(otherId);
-        Thread.sleep(3000);
     }
 
-    public void setDriverLicense(String driverLicense) throws InterruptedException {
+    public void setDriverLicense(String driverLicense) {
         wait.until(ExpectedConditions.visibilityOf(txtDriverLicense));
         txtDriverLicense.sendKeys(driverLicense);
-        Thread.sleep(3000);
     }
 
-    public void setLicenseExpiryDate(String date) throws InterruptedException {
+    public void setLicenseExpiryDate(String date) {
         wait.until(ExpectedConditions.visibilityOf(txtLicenseExpiryDate));
         txtLicenseExpiryDate.sendKeys(date);
-        Thread.sleep(3000);
     }
 
-    public void clickAndSelectNationality() throws InterruptedException {
+    public void clickAndSelectNationality() {
         btnNationality.click();
-
-        Thread.sleep(3000);
         btnNationality.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-        Thread.sleep(3000);
     }
 
-    public void clickAndSelectMaritalStatus() throws InterruptedException {
+    public void clickAndSelectMaritalStatus() {
         btnMaritalStatus.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-        Thread.sleep(3000);
     }
 
-    public void setDateOfBirth(String birthDate) throws InterruptedException {
+    public void setDateOfBirth(String birthDate) {
         wait.until(ExpectedConditions.visibilityOf(txtDateOfBirth));
         txtDateOfBirth.sendKeys(birthDate);
-        Thread.sleep(3000);
     }
 
-    public void checkGender(String gender) throws InterruptedException {
+    public void checkGender(String gender) {
         driver.findElement(By.xpath("//label[normalize-space()="+ "'"+ gender +"'"+"]")).click();
-        Thread.sleep(3000);
     }
 
-    public void clickSave() throws InterruptedException {
+    public void clickSave() {
         wait.until(ExpectedConditions.visibilityOf(btnSave));
         btnSave.click();
-        Thread.sleep(3000);
     }
 }
