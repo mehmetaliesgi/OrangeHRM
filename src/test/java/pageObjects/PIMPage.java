@@ -35,6 +35,21 @@ public class PIMPage extends BasePage{
     @FindBy(xpath = "//h6[normalize-space()='Personal Details']")
     private WebElement txtPersonalDetails;
 
+    @FindBy(xpath = "//a[normalize-space()='Employee List']")
+    private WebElement btnEmployeeList;
+
+    @FindBy(xpath = "//h5[normalize-space()='Employee Information']")
+    private WebElement txtEmployeeInfo;
+
+    @FindBy(xpath = "//button[normalize-space()='Search']")
+    private WebElement btnSearch;
+
+    @FindBy(xpath = "//div[contains(span, 'Record Found')]")
+    private WebElement txtRecordFound;
+
+    @FindBy(xpath = "//i[@class='oxd-icon bi-pencil-fill']")
+    private WebElement btnPersonalDetails;
+
     public boolean isPIMHeaderDisplayed() {
         wait.until(ExpectedConditions.visibilityOf(txtPIMHeader));
         try {
@@ -84,4 +99,41 @@ public class PIMPage extends BasePage{
         }
     }
 
+    public void clickEmployeeList() {
+        wait.until(ExpectedConditions.visibilityOf(btnEmployeeList));
+        btnEmployeeList.click();
+    }
+
+    public boolean isEmployeeInfoDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(txtEmployeeInfo));
+        try {
+            return txtEmployeeInfo.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void searchWithEmployeeID(String employeeID) {
+        wait.until(ExpectedConditions.visibilityOf(txtEmployeeID));
+        txtEmployeeID.sendKeys(employeeID);
+    }
+
+    public void clickSearch() {
+        wait.until(ExpectedConditions.visibilityOf(btnSearch));
+        btnSearch.click();
+    }
+
+    public boolean isRecordFound() {
+        wait.until(ExpectedConditions.visibilityOf(txtRecordFound));
+        try {
+            return txtRecordFound.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickPersonalDetails() {
+        wait.until(ExpectedConditions.visibilityOf(btnPersonalDetails));
+        btnPersonalDetails.click();
+    }
 }
