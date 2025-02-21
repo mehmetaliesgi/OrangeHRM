@@ -53,6 +53,9 @@ public class PIMPage extends BasePage{
     @FindBy(xpath = "//a[normalize-space()='Contact Details']")
     private WebElement btnContactDetails;
 
+    @FindBy(xpath = "//a[normalize-space()='Emergency Contacts']")
+    private WebElement btnEmergencyContact;
+
     public boolean isPIMHeaderDisplayed() {
         wait.until(ExpectedConditions.visibilityOf(txtPIMHeader));
         try {
@@ -143,4 +146,6 @@ public class PIMPage extends BasePage{
     public void clickContactDetails() {
         btnContactDetails.click();
     }
+
+    public void clickEmergencyContacts() { btnEmergencyContact.click(); }
 }

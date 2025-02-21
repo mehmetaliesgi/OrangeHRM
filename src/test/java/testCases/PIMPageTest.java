@@ -6,7 +6,7 @@ import pageObjects.*;
 import testBase.BaseClass;
 
 public class PIMPageTest extends BaseClass {
-/*    @Test
+    @Test
     public void addNewEmployee() {
         logger.info("******* Starting Add New Employee *******");
 
@@ -122,7 +122,7 @@ public class PIMPageTest extends BaseClass {
             Assert.fail();
         }
         logger.info("***** Finished Edit Employee *****");
-    }*/
+    }
 
 
     @Test

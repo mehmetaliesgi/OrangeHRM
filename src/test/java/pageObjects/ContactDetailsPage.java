@@ -128,23 +128,7 @@ public class ContactDetailsPage extends BasePage{
     public void addAttachment(String dest) {
         scrollToElement(btnSaveAttachments);
         divBrowse.click();
-        try {
-            Robot robot = new Robot();
-
-            StringSelection stringSelection = new StringSelection(dest);
-            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-
-            robot.delay(2000);
-            robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_V);
-            robot.keyRelease(KeyEvent.VK_V);
-            robot.keyRelease(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.delay(4000);
-            robot.keyRelease(KeyEvent.VK_ENTER);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        addAttachmentFile(dest);
     }
 
     public void setComment(String comment) {
