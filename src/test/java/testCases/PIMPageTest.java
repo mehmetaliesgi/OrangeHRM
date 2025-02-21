@@ -186,7 +186,7 @@ public class PIMPageTest extends BaseClass {
         }
         logger.info("***** Finished Edit Contact Details for Employee *****");
     }
-*/
+
 
     @Test
     public void editEmergencyContacts() {
@@ -242,5 +242,59 @@ public class PIMPageTest extends BaseClass {
             Assert.fail();
         }
         logger.info("***** Finished Emergency Contacts Details for Employee *****");
+    }
+*/
+    @Test
+    public void editDependents() {
+        logger.info("******* Starting Edit Dependents for Employee *******");
+
+        try {
+            LoginPage loginPage = new LoginPage(driver, wait);
+
+            loginPage.setUsername(properties.getProperty("username"));
+            loginPage.setPassword(properties.getProperty("password"));
+            loginPage.clickLogin();
+
+            DashboardPage dashboardPage = new DashboardPage(driver, wait);
+            boolean targetPage = dashboardPage.isDashboardPageExist();
+            Assert.assertTrue(targetPage);
+
+            dashboardPage.clickPIM();
+            PIMPage pimPage = new PIMPage(driver, wait);
+            boolean accessPimPage = pimPage.isPIMHeaderDisplayed();
+            Assert.assertTrue(accessPimPage);
+
+            pimPage.clickEmployeeList();
+
+            boolean isEmployeeInfo = pimPage.isEmployeeInfoDisplayed();
+            Assert.assertTrue(isEmployeeInfo);
+
+            pimPage.searchWithEmployeeID("01715");
+            pimPage.clickSearch();
+
+            boolean isRecordFound = pimPage.isRecordFound();
+            Assert.assertTrue(isRecordFound);
+
+            pimPage.clickEmployeeDetails();
+            pimPage.clickDependents();
+
+            DependentsPage dependentsPage = new DependentsPage(driver, wait);
+            dependentsPage.clickAddDependents();
+            dependentsPage.setName(randomString(5));
+            dependentsPage.setRelationship();
+            dependentsPage.setDateOfBirth("2001-11-11");
+            dependentsPage.clickSaveDependents();
+
+            dependentsPage.clickAddAttachment();
+            dependentsPage.clickBrowse("C:\\Users\\mehme\\Desktop\\Selenium_Projects\\OrangeHRM\\src\\test\\resources\\resumeMehmetAliEsgi.pdf");
+            dependentsPage.setComment(randomString(50));
+            dependentsPage.clickSaveAttachment();
+            boolean isAttachmentSave = dependentsPage.isRecordFound();
+            Assert.assertTrue(isAttachmentSave);
+
+        } catch (Exception e) {
+            Assert.fail();
+        }
+        logger.info("***** Finished Dependents for Employee *****");
     }
 }

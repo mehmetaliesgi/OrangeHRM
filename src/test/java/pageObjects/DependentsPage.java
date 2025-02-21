@@ -48,11 +48,12 @@ public class DependentsPage extends BasePage{
     }
 
     public void setName(String name) {
+        wait.until(ExpectedConditions.visibilityOf(txtName));
         txtName.sendKeys(name);
     }
 
     public void setRelationship() {
-        slctRelationship.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+        slctRelationship.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
     }
 
     public void setDateOfBirth(String date) {
