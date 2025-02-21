@@ -6,6 +6,7 @@ import pageObjects.*;
 import testBase.BaseClass;
 
 public class PIMPageTest extends BaseClass {
+/*
     @Test
     public void addNewEmployee() {
         logger.info("******* Starting Add New Employee *******");
@@ -184,5 +185,62 @@ public class PIMPageTest extends BaseClass {
             Assert.fail();
         }
         logger.info("***** Finished Edit Contact Details for Employee *****");
+    }
+*/
+
+    @Test
+    public void editEmergencyContacts() {
+        logger.info("******* Starting Edit Emergency Contacts for Employee *******");
+
+        try {
+            LoginPage loginPage = new LoginPage(driver, wait);
+
+            loginPage.setUsername(properties.getProperty("username"));
+            loginPage.setPassword(properties.getProperty("password"));
+            loginPage.clickLogin();
+
+            DashboardPage dashboardPage = new DashboardPage(driver, wait);
+            boolean targetPage = dashboardPage.isDashboardPageExist();
+            Assert.assertTrue(targetPage);
+
+            dashboardPage.clickPIM();
+            PIMPage pimPage = new PIMPage(driver, wait);
+            boolean accessPimPage = pimPage.isPIMHeaderDisplayed();
+            Assert.assertTrue(accessPimPage);
+
+            pimPage.clickEmployeeList();
+
+            boolean isEmployeeInfo = pimPage.isEmployeeInfoDisplayed();
+            Assert.assertTrue(isEmployeeInfo);
+
+            pimPage.searchWithEmployeeID("01715");
+            pimPage.clickSearch();
+
+            boolean isRecordFound = pimPage.isRecordFound();
+            Assert.assertTrue(isRecordFound);
+
+            pimPage.clickEmployeeDetails();
+            pimPage.clickEmergencyContacts();
+
+            EmergencyContactsPage emergencyContact = new EmergencyContactsPage(driver, wait);
+            emergencyContact.clickAddEmergencyContact();
+            emergencyContact.setName(randomString(5));
+            emergencyContact.setRelationship(randomString(5));
+            emergencyContact.setHomePhone(randomNumber());
+            emergencyContact.setMobilePhone(randomNumber());
+            emergencyContact.setWorkPhone(randomNumber());
+            emergencyContact.clickSaveEmergencyContact();
+
+            emergencyContact.clickAddAttachments();
+            emergencyContact.clickBrowse("C:\\Users\\mehme\\Desktop\\Selenium_Projects\\OrangeHRM\\src\\test\\resources\\resumeMehmetAliEsgi.pdf");
+            emergencyContact.setComment(randomString(50));
+            emergencyContact.clickSaveAttachment();
+            boolean isAttachmentSave = emergencyContact.isRecordFound();
+            Assert.assertTrue(isAttachmentSave);
+
+        } catch (Exception e) {
+            Assert.fail();
+        }
+        logger.info("***** Finished Emergency Contacts Details for Employee *****");
     }
 }
