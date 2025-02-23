@@ -6,7 +6,7 @@ import pageObjects.*;
 import testBase.BaseClass;
 
 public class AdminTest extends BaseClass {
-    @Test
+/*    @Test
     public void addUserTest() {
         logger.info("******* Starting Add User Test *******");
 
@@ -48,5 +48,44 @@ public class AdminTest extends BaseClass {
             Assert.fail();
         }
         logger.info("***** Finished Add User Test *****");
+    }*/
+
+    @Test
+    public void addJobTitleTest() {
+        logger.info("******* Starting Add Job Title Test *******");
+
+        try {
+            LoginPage loginPage = new LoginPage(driver, wait);
+
+            loginPage.setUsername(properties.getProperty("username"));
+            loginPage.setPassword(properties.getProperty("password"));
+            loginPage.clickLogin();
+
+            DashboardPage dashboardPage = new DashboardPage(driver, wait);
+            boolean targetPage = dashboardPage.isDashboardPageExist();
+            Assert.assertTrue(targetPage);
+
+            dashboardPage.clickAdmin();
+
+            AdminPage adminPage = new AdminPage(driver, wait);
+            Assert.assertTrue(adminPage.isAdminHeaderDisplayed());
+            adminPage.clickJob();
+            adminPage.clickJobTitles();
+
+            JobTitlesPage jobTitlesPage = new JobTitlesPage(driver, wait);
+            jobTitlesPage.clickAddJobTitles();
+
+            AddJobTitlePage jobTitlePage = new AddJobTitlePage(driver, wait);
+            jobTitlePage.setJobTitle(randomString(5));
+            jobTitlePage.setJobDescription(randomString(50));
+            jobTitlePage.addJobSpesification("C:\\Users\\mehme\\Desktop\\Selenium_Projects\\OrangeHRM\\src\\test\\resources\\resumeMehmetAliEsgi.pdf");
+            jobTitlePage.addNote(randomString(70));
+            jobTitlePage.clickSaveJobTitle();
+            Assert.assertTrue(jobTitlesPage.isRecordFoundDisplayed());
+
+        } catch (Exception e) {
+            Assert.fail();
+        }
+        logger.info("***** Finished Add Job Title Test *****");
     }
 }

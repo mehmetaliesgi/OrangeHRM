@@ -43,3 +43,8 @@
 16:14:57 [main] INFO  testCases.AdminTest - ******* Starting Add User Test *******
 16:17:38 [main] INFO  testCases.AdminTest - ******* Starting Add User Test *******
 16:17:49 [main] INFO  testCases.AdminTest - ***** Finished Add User Test *****
+23:42:25 [main] INFO  testCases.AdminTest - ******* Starting Add Job Title Test *******
+23:44:52 [main] INFO  testCases.AdminTest - ******* Starting Add Job Title Test *******
+23:45:03 [main] INFO  testCases.AdminTest - ***** Finished Add Job Title Test *****
+23:49:00 [main] INFO  testCases.AdminTest - ******* Starting Add Job Title Test *******
+23:49:17 [main] INFO  testCases.AdminTest - ***** Finished Add Job Title Test *****

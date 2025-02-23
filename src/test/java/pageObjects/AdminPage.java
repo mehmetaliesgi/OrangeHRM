@@ -75,7 +75,13 @@ public class AdminPage extends BasePage{
         }
     }
 
-    public void clickJob() { slctJob.click(); }
+    public void clickJob() {
+        wait.until(ExpectedConditions.visibilityOf(slctJob));
+        slctJob.click();
+    }
 
-    public void clickJobTitles() { slctJobTitles.click(); }
+    public void clickJobTitles() {
+        wait.until(ExpectedConditions.visibilityOf(slctJobTitles));
+        slctJobTitles.click();
+    }
 }
