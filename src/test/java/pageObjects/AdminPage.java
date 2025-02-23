@@ -25,6 +25,12 @@ public class AdminPage extends BasePage{
     @FindBy(xpath = "//span[normalize-space()='(1) Record Found']")
     private WebElement txtRecordFound;
 
+    @FindBy(xpath = "//span[normalize-space()='Job']")
+    private WebElement slctJob;
+
+    @FindBy(xpath = "//span[normalize-space()='Job']/following::li[normalize-space()='Job Titles']")
+    private WebElement slctJobTitles;
+
     public AdminPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
@@ -68,4 +74,8 @@ public class AdminPage extends BasePage{
             return false;
         }
     }
+
+    public void clickJob() { slctJob.click(); }
+
+    public void clickJobTitles() { slctJobTitles.click(); }
 }
