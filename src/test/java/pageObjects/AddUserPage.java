@@ -38,8 +38,10 @@ public class AddUserPage extends BasePage{
         slctUserRole.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
     }
 
-    public void setEmployeeName(String employeeName) {
+    public void setEmployeeName(String employeeName) throws InterruptedException {
         txtEmployeeName.sendKeys(employeeName);
+        Thread.sleep(2000);
+        txtEmployeeName.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
     }
 
     public void setUserStatus() {

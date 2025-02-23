@@ -38,3 +38,8 @@
 20:48:08 [main] INFO  testCases.LoginTest - ***** Finished LoginTest *****
 20:48:12 [main] INFO  testCases.PIMPageTest - ******* Starting Edit Dependents for Employee *******
 20:48:28 [main] INFO  testCases.PIMPageTest - ***** Finished Dependents for Employee *****
+16:04:05 [main] INFO  testCases.AdminTest - ******* Starting Add User Test *******
+16:10:12 [main] INFO  testCases.AdminTest - ******* Starting Add User Test *******
+16:14:57 [main] INFO  testCases.AdminTest - ******* Starting Add User Test *******
+16:17:38 [main] INFO  testCases.AdminTest - ******* Starting Add User Test *******
+16:17:49 [main] INFO  testCases.AdminTest - ***** Finished Add User Test *****

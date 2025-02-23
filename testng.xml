@@ -10,8 +10,9 @@
         <parameter name="os" value="Windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testCases.LoginTest"/>
-            <class name="testCases.PIMPageTest"/>
+            <!--<class name="testCases.LoginTest"/>
+            <class name="testCases.PIMPageTest"/>-->
+            <class name="testCases.AdminTest"/>
         </classes>
     </test>
 </suite>

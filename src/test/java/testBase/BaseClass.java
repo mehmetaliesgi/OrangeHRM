@@ -73,11 +73,13 @@ public class BaseClass {
     }
 
     public String randomNumber() {
-        return (RandomStringUtils.randomNumeric(5));
+        return (RandomStringUtils.randomNumeric(8));
     }
 
     public String randomString(int letterCount) {
         return (RandomStringUtils.randomAlphabetic(letterCount));
     }
+
+    public String randomAlphanumericString(int letteCount) { return (RandomStringUtils.randomAlphanumeric(letteCount)); }
 
 }
