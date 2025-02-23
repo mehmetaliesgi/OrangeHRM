@@ -17,6 +17,9 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//span[normalize-space()='PIM']")
     private WebElement btnPIM;
 
+    @FindBy(xpath = "//span[normalize-space()='Admin']")
+    private WebElement btnAdmin;
+
     public boolean isDashboardPageExist() {
         wait.until(ExpectedConditions.visibilityOf(txtDashboardHeader));
         try {
@@ -29,5 +32,10 @@ public class DashboardPage extends BasePage {
     public void clickPIM() {
         wait.until(ExpectedConditions.visibilityOf(btnPIM));
         btnPIM.click();
+    }
+
+    public void clickAdmin() {
+        wait.until(ExpectedConditions.visibilityOf(btnAdmin));
+        btnAdmin.click();
     }
 }
