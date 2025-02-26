@@ -31,6 +31,9 @@ public class AdminPage extends BasePage{
     @FindBy(xpath = "//span[normalize-space()='Job']/following::li[normalize-space()='Job Titles']")
     private WebElement slctJobTitles;
 
+    @FindBy(xpath = "//span[normalize-space()='Job']/following::li[normalize-space()='Work Shifts']")
+    private WebElement slctWorkShifts;
+
     public AdminPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
@@ -83,5 +86,10 @@ public class AdminPage extends BasePage{
     public void clickJobTitles() {
         wait.until(ExpectedConditions.visibilityOf(slctJobTitles));
         slctJobTitles.click();
+    }
+
+    public void clickWorkShifts() {
+        wait.until(ExpectedConditions.visibilityOf(slctWorkShifts));
+        slctWorkShifts.click();
     }
 }

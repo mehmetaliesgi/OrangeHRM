@@ -31,7 +31,7 @@ public class BaseClass {
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
-        FileReader file =new FileReader("C:\\Users\\mehme\\Desktop\\Selenium_Projects\\OrangeHRM\\src\\test\\resources\\config.properties");
+        FileReader file =new FileReader("C:\\Users\\Mehmet\\Desktop\\Yeni klasör\\OrangeHRM\\src\\test\\resources\\config.properties");
         properties = new Properties();
         properties.load(file);
     }
