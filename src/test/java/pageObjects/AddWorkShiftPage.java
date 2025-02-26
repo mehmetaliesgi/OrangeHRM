@@ -1,5 +1,6 @@
 package pageObjects;
 
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ public class AddWorkShiftPage extends BasePage {
     @FindBy(xpath = "//label[normalize-space()='Shift Name']/following::input[1]")
     private WebElement txtShiftName;
 
-    @FindBy(xpath = "//p[normalize-space()='Working Hours *']/following::i[1]")
+    @FindBy(xpath = "//label[normalize-space()='From']/following::i[1]")
     private WebElement iFromHour;
 
     @FindBy(xpath = "//div[@class='oxd-time-hour-input']/input")
@@ -24,7 +25,7 @@ public class AddWorkShiftPage extends BasePage {
     @FindBy(xpath = "//div[@class='oxd-time-minute-input']/input")
     private WebElement txtFromMinute;
 
-    @FindBy(xpath = "//p[normalize-space()='Working Hours *']/following::i[2]")
+    @FindBy(xpath = "//label[normalize-space()='To']/following::i")
     private WebElement iToHour;
 
     @FindBy(xpath = "//div[@class='oxd-time-picker']//input[@class='oxd-input oxd-input--active oxd-time-hour-input-text']")
@@ -56,19 +57,27 @@ public class AddWorkShiftPage extends BasePage {
         txtShiftName.sendKeys(shiftName);
     }
 
-    public void setFromHour(String fromHour, String fromMinute, String period) {
+    public void setFromHour(String fromHour, String fromMinute, String period) throws InterruptedException {
         iFromHour.click();
         wait.until(ExpectedConditions.visibilityOf(txtFromHour));
+        txtFromHour.clear();
         txtFromHour.sendKeys(fromHour);
+        Thread.sleep(1000);
+        txtFromMinute.clear();
         txtFromMinute.sendKeys(fromMinute);
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//div[@class='oxd-time-period-input']//input[@value='" + period.toUpperCase() + "']")).click();
     }
 
-    public void setToHour(String toHour, String toMinute, String period) {
+    public void setToHour(String toHour, String toMinute, String period) throws InterruptedException {
         iToHour.click();
         wait.until(ExpectedConditions.visibilityOf(txtToHour));
+        txtToHour.clear();
         txtToHour.sendKeys(toHour);
+        Thread.sleep(1000);
+        txtToMinute.clear();
         txtToMinute.sendKeys(toMinute);
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//div[@class='oxd-time-period-input']//input[@value='" + period.toUpperCase() + "']")).click();
     }
 

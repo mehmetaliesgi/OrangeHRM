@@ -48,7 +48,7 @@ public class AdminTest extends BaseClass {
             Assert.fail();
         }
         logger.info("***** Finished Add User Test *****");
-    }*/
+    }
 
     @Test
     public void addJobTitleTest() {
@@ -87,5 +87,49 @@ public class AdminTest extends BaseClass {
             Assert.fail();
         }
         logger.info("***** Finished Add Job Title Test *****");
+    }
+*/
+    @Test
+    public void addWorkShiftTest() {
+        logger.info("******* Starting Add Work Shift Test *******");
+
+        try {
+            LoginPage loginPage = new LoginPage(driver, wait);
+
+            loginPage.setUsername(properties.getProperty("username"));
+            loginPage.setPassword(properties.getProperty("password"));
+            loginPage.clickLogin();
+
+            DashboardPage dashboardPage = new DashboardPage(driver, wait);
+            boolean targetPage = dashboardPage.isDashboardPageExist();
+            Assert.assertTrue(targetPage);
+
+            dashboardPage.clickAdmin();
+
+            AdminPage adminPage = new AdminPage(driver, wait);
+            Assert.assertTrue(adminPage.isAdminHeaderDisplayed());
+            adminPage.clickJob();
+            adminPage.clickWorkShifts();
+
+            WorkShiftsPage workShiftsPage = new WorkShiftsPage(driver, wait);
+            Assert.assertTrue(workShiftsPage.isWorkShiftsPageDisplayed());
+            workShiftsPage.clickAddWorkShiftButton();
+
+            AddWorkShiftPage workShiftPage = new AddWorkShiftPage(driver, wait);
+            Assert.assertTrue(workShiftPage.isWorkShiftPageDisplayed());
+            String shiftName = randomString(8);
+            System.out.println(shiftName);
+            workShiftPage.setShiftName(shiftName);
+            workShiftPage.setFromHour("07", "30", "am");
+            workShiftPage.setToHour("07", "30","pm");
+            workShiftPage.setAssignedEmployees("A");
+            workShiftPage.clickSave();
+
+            Assert.assertTrue(workShiftsPage.doesInsetedDataDisplayed(shiftName));
+
+        } catch (Exception e) {
+            Assert.fail();
+        }
+        logger.info("***** Finished Add Work Shift Test *****");
     }
 }

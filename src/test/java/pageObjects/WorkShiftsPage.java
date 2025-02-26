@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,5 +31,14 @@ public class WorkShiftsPage extends BasePage {
         btnAdd.click();
     }
 
+    public boolean doesInsetedDataDisplayed(String workShiftName) {
+        WebElement workShiftEl = driver.findElement(By.xpath("//div[@class='oxd-table']//div[text()='" + workShiftName + "']"));
+        wait.until(ExpectedConditions.visibilityOf(workShiftEl));
 
+        try {
+            return workShiftEl.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
